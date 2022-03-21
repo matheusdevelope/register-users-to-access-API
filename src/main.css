@@ -11,13 +11,3 @@
 html {
   height: 100vh;
 }
-.App_Header {
-  height: 50px;
-  background-color: #21222c;
-  display: flex;
-}
-.App_Header p {
-  font-size: 25px;
-  color: #f3f3ed;
-  margin: auto;
-}
