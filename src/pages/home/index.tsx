@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormUser from "../../components/FormUser";
 import ListUser from "../../components/ListUsers";
 import { IUser } from "../../types/User";
@@ -47,6 +47,11 @@ function Home() {
   function handleSendEditUserToForm(user: IUser) {
     setUserToEdit({ ...user });
   }
+  useEffect(() => {
+    fetch("/api")
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
   return (
     <C.Container>
       <HeaderApp />
